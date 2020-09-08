@@ -16,25 +16,83 @@ img {
     width: 250px;
 }
 
+.header-flex {
+    height: 125px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    background: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+}
+
+.header-flex img {
+    height: 100px;
+}
+
+.link-flex {
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .relative-position, .fixed-position, .absolute-position, .sticky-box {
     width: 250px;
     border: 2px solid black;
     margin: 15px;
 }
 
+.relative-position {
+    position: relative;
+    left: 25px;
+    bottom: 25px;
+    z-index: 1;
+}
+
+.fixed-position {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
 .ancestor {
     height: 200px;
     border: 2px solid black;
+    position: relative;
 }
 
 .child {
-    width: 150px;
+    width: 75%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 50px;
 }
 
 .row {
     height: 50vh;
     margin-bottom: 150px;
     border: 2px solid black; 
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    /* align-items: flex-end; */
+    align-items: center;
 }
 
 .row img {
@@ -45,6 +103,11 @@ img {
 .column {
     height: 75vh;
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .overflow-section {
@@ -57,4 +120,7 @@ img {
     border: 2px solid black;
     margin: 0 auto;
     margin-bottom: 50px;
+    /* overflow: hidden; */
+    overflow: scroll;
+    box-shadow: 0px 0px 5px 5px red;
 }
